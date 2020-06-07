@@ -1,0 +1,35 @@
+// Bootstrap functions
+@import '../../node_modules/bootstrap/scss/functions';
+
+// Skin
+ @import "skins/blue/light";
+
+// Custom variables
+@import "custom/variables";
+
+// Purpose functions
+@import "theme/functions";
+@import "theme/variables";
+
+// Custom fonts
+@import "custom/fonts";
+
+// Bootstrap core
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+// Purpose mixins
+@import "theme/mixins";
+
+// Bootstrap components
+@import 'theme/bootstrap';
+
+// Purpose components
+@import 'theme/reboot';
+@import 'theme/utilities';
+@import 'theme/components';
+@import 'theme/libs';
+
+// Custom styles
+@import 'custom/styles';

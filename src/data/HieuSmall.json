@@ -1,0 +1,268 @@
+{
+  "vi": {
+    "name": "Nguyễn Trung Hiếu",
+    "email": "hieusmall1102@gmail.com",
+    "profession": "Web developer",
+    "phone": "0352306562",
+    "age": 25,
+    "city": "Hồ Chí Minh",
+    "social": {
+      "github": "http://github.com/tieuquetuu",
+      "facebook": "http://fb.com/hieukitkat.thc",
+      "linkedin": "http://linkedin.com/in/nguyen-trung-hieu-b6600b181"
+    },
+    "experience": [
+      {
+        "company": "Freelancer.com",
+        "website": "http://freelancer.com",
+        "distance": {
+          "begin": "02/2020",
+          "end": "Nay"
+        },
+        "position": "Freelancer"
+      },
+      {
+        "company": "Ngọc Dung Beauty Center",
+        "website": "http://thammyvienngocdung.com",
+        "position": "Web developer",
+        "description": [
+          "Tham gia thiết kế , xây dựng và quản trị website thương hiệu, landingpage khuyến mãi",
+          "Lập trình giao diện, chức năng hỗ trợ thu thập dữ liệu khách hàng,thống kê và báo cáo số liệu,landingpage quảng cáo,minigame trúng thưởng",
+          "Tham gia lên kế hoạch, nghiên cứu và áp dụng các giải pháp marketing tự động, chăm sóc khách hàng tự động.",
+          "Xây dựng kịch bản chatbot messenger với ahachat",
+          "Tham gia xây dựng các ứng dụng web hỗ trợ quản lí khách hàng,quản lí chương trình khuyến mãi, quản lí dữ liệu cho các phòng ban khác",
+          "Quản lí và bảo mật domain website và vps"
+        ],
+        "distance": {
+          "begin": "04/2017",
+          "end": "02/2020"
+        }
+      },
+      {
+        "company": "Cheapgo",
+        "position": "Intern web developer",
+        "description": [
+          "Chuyển giao diện PSD sang HTML",
+          "Lập trình giao diện cho website thương hiệu trên nền tảng wordpress"
+        ],
+        "distance": {
+          "begin": "01/2017",
+          "end": "04/2017"
+        }
+      }
+    ],
+    "education": [
+      {
+        "university": "Viện Đại Học Mở Hà Nội",
+        "specialized": "Công Nghệ Thông Tin",
+        "distance": {
+          "begin": "2014",
+          "end": "2017"
+        },
+        "status": "Học",
+        "description": "Chưa tốt nghiệp"
+      }
+    ],
+    "skill": {
+      "development": {
+        "description": [
+          "Lập trình giao diện, plugin Wordpress, Landingpage theo yêu cầu, chuẩn Responsive, tối ưu code cho SEO, PageSpeed Insight",
+          "Lập trình ứng dụng web quản lí khách hàng, quản lí dữ liệu, sản phẩm ...",
+          "Nghiên cứu và áp dụng các công nghệ mới để tối ưu hóa hiệu quả phát triển sản phẩm",
+          "Có kinh nghiệm với REST APIs, Json, CRUD",
+          "Có kiến thức lập trình MEAN,MERN,LAMP",
+          "Sử dụng tốt với thư viện npm, GIT (pull,add,commit,push ...)",
+          "Quản lí,cấu hình tên miền,cấu hình SSL",
+          "Làm việc tốt với vps Linux, Ubuntu",
+          "Triển khai sản phẩm trên server,sao lưu,bảo mật dữ liệu"
+        ],
+        "technologies": [
+          {
+            "name": "HTML5",
+            "slug": "html5",
+            "icon": "fab fa-html5",
+            "lv": 8,
+            "color": "#F16529"
+          },
+          {
+            "name": "CSS3",
+            "slug": "css3",
+            "icon": "fab fa-css3",
+            "lv": 8,
+            "color": "#264de4"
+          },
+          {
+            "name": "Sass",
+            "slug": "sass",
+            "icon": "fab fa-sass",
+            "lv": 5,
+            "color": "#264de4"
+          },
+          {
+            "name": "JS DOM",
+            "icon": "fab fa-js-square",
+            "slug": "js",
+            "lv": 8,
+            "color": "#807005"
+          },
+          {
+            "name": "Bootstrap",
+            "icon": "fab fa-bootstrap",
+            "slug": "bootstrap",
+            "lv": 8,
+            "color": "#7952b3"
+          },
+          {
+            "name": "Jquery",
+            "slug": "jquery",
+            "lv": 8,
+            "color": "#807005"
+          },
+          {
+            "name": "React JS",
+            "icon": "fab fa-react",
+            "slug": "reactjs",
+            "lv": 7,
+            "color": "#61DBFB"
+          },
+          {
+            "name": "Angular JS",
+            "icon": "fab fa-angular",
+            "slug": "angularjs",
+            "lv": 7,
+            "color": "#b52e31"
+          },
+          {
+            "name": "PHP",
+            "icon": "fab fa-php",
+            "slug": "php",
+            "lv": 8,
+            "color": "#474a8a"
+          },
+          {
+            "name": "Laravel",
+            "slug": "laravel",
+            "icon": "fab fa-laravel",
+            "lv": 8,
+            "color": "#f05340"
+          },
+          {
+            "name": "Wordpress",
+            "slug": "wordpress",
+            "icon": "fab fa-wordpress",
+            "lv": 8,
+            "color": "#00749c"
+          },
+          {
+            "name": "Nodejs",
+            "slug": "node-js",
+            "icon": "fab fa-node-js",
+            "lv": 8,
+            "color": "#026e00"
+          },
+          {
+            "name": "Socket.io",
+            "slug": "socket-io",
+            "lv": 7,
+            "color": "#026e00"
+          },
+          {
+            "name": "Mongodb",
+            "slug": "mongodb",
+            "lv": 8,
+            "color": "#666666"
+          },
+          {
+            "name": "Mysql",
+            "slug": "mysql",
+            "lv": 8,
+            "color": "#00758f"
+          },
+          {
+            "name": "Nginx",
+            "slug": "nginx",
+            "lv": 5,
+            "color": "#00758f"
+          }
+        ]
+      },
+      "soft": [
+        {
+          "label" : "Kĩ năng Giao tiếp",
+          "slug": "communication",
+          "lv": 4
+        },
+        {
+          "label" : "Khả năng làm việc nhóm",
+          "slug": "teamwork",
+          "lv": 5
+        },
+        {
+          "label" : "Kĩ năng quản lí công việc",
+          "slug": "workflow-management",
+          "lv": 4
+        },
+        {
+          "label" : "Kĩ năng quản lí thời gian",
+          "slug": "time-management",
+          "lv": 4
+        },
+        {
+          "label" : "Kĩ năng research",
+          "slug": "research",
+          "lv": 5
+        },
+        {
+          "label" : "Tiếng Anh giao tiếp",
+          "slug": "english",
+          "lv": 1
+        }
+      ]
+    },
+    "endorsements": [
+      {
+        "name": "Lê Công An",
+        "position": "Manager Digital Marketing",
+        "email": "lecongan1503@gmail.com",
+        "phone": "0906619041"
+      },
+      {
+        "name": "Trần Phước Phương",
+        "position": "Manager Digital Marketing",
+        "phone": "0978987637",
+        "email": "tranphuocphuong@ngocdung.com"
+      },
+      {
+        "name": "Hoàng Nghĩa",
+        "position": "Leader Team CODE",
+        "email": "hoangnghiagll@gmail.com",
+        "phone": "0901649246"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Website thương hiệu Thẩm mỹ viện ngọc dung",
+        "url": "https://thammyvienngocdung.com",
+        "slug": "tmvnd",
+        "technologies": ["Wordpress", "UX Builder", "SEO Yoast", "Form Builder"]
+      },
+      {
+        "name": "Minigame Vòng quay may mắn",
+        "url": "https://minigame.thammyvienngocdung.com",
+        "slug": "minigame",
+        "technologies": ["Bootstrap","Nodejs", "Express", "Socket.io", "Gsap"]
+      },
+      {
+        "name": "Ứng Dụng Quản Lí Khách Hàng",
+        "slug": "tools",
+        "technologies": ["Laravel", "Bootstrap", "ChartJs", "DataTable", "Fancybox"]
+      },
+      {
+        "name": "Website bất động sản",
+        "slug": "leloiresidence",
+        "url": "https://leloiresidence.com",
+        "technologies": ["Bootstrap", "Swiper", "Fancybox","SEO Yoast", "Form Builder"]
+      }
+    ]
+  }
+}

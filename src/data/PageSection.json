@@ -1,0 +1,159 @@
+{
+  "vi": {
+    "contact": {
+      "icon": "fad fa-id-card-alt",
+      "title": "Liên lạc",
+      "group": [
+        {
+          "label": "Email",
+          "slug": "email",
+          "icon": "fad fa-mailbox"
+        },
+        {
+          "label": "Số điện thoại",
+          "slug": "phone",
+          "icon": "fad fa-phone"
+        },
+        {
+          "label": "Thành phố",
+          "slug": "city",
+          "icon": "fad fa-map-marker-alt"
+        },
+        {
+          "label": "Tuổi",
+          "slug": "age",
+          "icon": "fad fa-birthday-cake"
+        }
+      ]
+    },
+    "social": {
+      "title": "Mạng xã hội",
+      "icon": "fad fa-share-alt",
+      "group": [
+        {
+          "label": "Github",
+          "slug": "github",
+          "icon": "fab fa-github",
+          "color": "#24292e"
+        },
+        {
+          "label": "Facebook",
+          "slug": "facebook",
+          "icon": "fab fa-facebook",
+          "color": "#0084ff"
+        },
+        {
+          "label": "Linkedin",
+          "slug": "linkedin",
+          "icon": "fab fa-linkedin",
+          "color": "#0073b1"
+        }
+      ]
+    },
+    "experience": {
+      "title": "Kinh nghiệm",
+      "icon": "fad fa-file-signature"
+    },
+    "education": {
+      "title": "Học vấn",
+      "icon": "fad fa-university"
+    },
+    "skill": {
+      "development": {
+        "title" : "Kĩ năng lập trình",
+        "icon" : "fad fa-laptop-code",
+        "rank": {
+          "1": {
+            "label": "Level 1",
+            "desc": "Nghe Qua Tên",
+            "point": 10
+          },
+          "2": {
+            "label": "Level 2",
+            "desc": "Biết tên và biết công nghệ này làm gì",
+            "point": 20
+          },
+          "3": {
+            "label": "Level 3",
+            "desc": "Biết được thông tin tổng quan về công nghệ",
+            "point": 30
+          },
+          "4": {
+            "label": "Level 4",
+            "desc": "Làm được 'hello world' project",
+            "point": 40
+          },
+          "5": {
+            "label": "Level 5",
+            "desc": "Làm được các chức năng cơ bản",
+            "point": 50
+          },
+          "6": {
+            "label": "Level 4",
+            "desc": "Vừa làm vừa xem documents",
+            "point": 60
+          },
+          "7": {
+            "label": "Level 7",
+            "desc": "Làm được các chức năng theo nhu cầu",
+            "point": 70
+          },
+          "8": {
+            "label": "Level 8",
+            "desc": "Sử dụng được công nghệ thành thạo",
+            "point": 80
+          },
+          "9": {
+            "label": "Level 9",
+            "desc": "Có thể tối ưu code, cải tiến hoặc xây dựng được một vài thư viện, framework dựa trên công nghệ",
+            "point": 90
+          },
+          "10": {
+            "label": "Level 10",
+            "desc": "Tạo được một công nghệ tương tự",
+            "point": 100
+          }
+        }
+      },
+      "soft": {
+        "title" : "Kĩ năng khác",
+        "icon" : "fad fa-hat-wizard",
+        "rank": {
+          "1": {
+            "label": "Level 1",
+            "point": 20,
+            "color": "danger"
+          },
+          "2": {
+            "label": "Level 2",
+            "point": 40,
+            "color": "warning"
+          },
+          "3": {
+            "label": "Level 3",
+            "point": 60,
+            "color": "info"
+          },
+          "4": {
+            "label": "Level 4",
+            "point": 80,
+            "color": "primary"
+          },
+          "5": {
+            "label": "Level 5",
+            "point": 100,
+            "color": "success"
+          }
+        }
+      }
+    },
+    "endorsements": {
+      "title": "Người chứng thực",
+      "icon": "fad fa-user-friends"
+    },
+    "projects": {
+      "title": "Dự án đã tham gia",
+      "icon": "fad fa-project-diagram"
+    }
+  }
+}

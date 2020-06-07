@@ -1,0 +1,45 @@
+// User styles
+//
+// This is the place where you should place all additional styles and imports.
+// This will allow you to take advantage of future updates with lower time consumed on the upgrade process.
+.w-65 {
+  width: 65%;
+}
+
+.w-35 {
+  width: 35%;
+}
+
+.page-title {
+  color: $primary;
+  text-transform: capitalize;
+}
+
+a {
+  color: $body-color;
+}
+
+.rank-item {
+  font-size: 0.85rem !important;
+  margin-right: 2px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: scale(1.2) !important;
+  }
+
+  &.complete {
+    color: $warning;
+  }
+
+  &.complete-demo {
+    //color: #ffab0075
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .header-account-page {
+    min-height: 200px;
+    height: 200px;
+  }
+}
