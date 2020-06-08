@@ -1,12 +1,12 @@
 import React, {useEffect} from "react";
 import user from "../components/User";
 import PageSection from "./PageSection";
-import Wall800x400 from "../wall800x400.png";
-import Avatar800x800 from "../ava800x800.png";
-import tmvnd1000x900 from "../img/tmvnd1000x900.png";
-import minigame1000x900 from "../img/minigame1000x900.png";
-import toolsndnet1000x900 from "../img/toolsndnet1000x900.png";
-import leloiresedence1000x900 from "../img/leloiresedence1000x900.png";
+import Wall800x400 from "../wall800x400.jpg";
+import Avatar800x800 from "../ava800x800.jpg";
+import tmvnd1000x900 from "../img/tmvnd1000x900.jpg";
+import minigame1000x900 from "../img/minigame1000x900.jpg";
+import toolsndnet1000x900 from "../img/toolsndnet1000x900.jpg";
+import leloiresedence1000x900 from "../img/leloiresedence1000x900.jpg";
 import tmvndScreen1 from "../img/screens/tmvnd/1.jpg";
 import minigameScreen1 from "../img/screens/minigame/1.jpg";
 import toolsScreen1 from "../img/screens/tools/1.jpg";
@@ -15,10 +15,9 @@ import toolsScreen3 from "../img/screens/tools/3.jpg";
 import toolsScreen4 from "../img/screens/tools/4.jpg";
 import leloiScreen1 from "../img/screens/leloiresidence/1.jpg";
 import NgocDung2x1 from "../img/ngocdung2x1.png";
-import AvatarLeCongAn from "../img/le_cong_an.png";
-import AvatarTranPhuocPhuong from "../img/tran_phuoc_phuong.png";
-import AvatarHoangNghia from "../img/hoang_nghia.png";
-import DayAndNight from "../img/daynight.svg";
+import AvatarLeCongAn from "../img/le_cong_an.jpg";
+import AvatarTranPhuocPhuong from "../img/tran_phuoc_phuong.jpg";
+import AvatarHoangNghia from "../img/hoang_nghia.jpg";
 import cvPDF from "../files/Nguyễn Trung Hiếu.pdf";
 import cvDOCX from "../files/Nguyễn Trung Hiếu.docx";
 import CardMargin from "./CardMargin";
@@ -29,8 +28,6 @@ import $ from "jquery";
 import Swal from 'sweetalert2';
 import "popper.js/dist/popper.min";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import SvgInjector from "../js/SvgInjector";
-import { TweenLite, TimelineMax } from 'gsap';
 const pageSection = PageSection();
 
 // Card Profile
@@ -516,7 +513,7 @@ function Projects() {
 }
 
 function CardProjects() {
-    return(<div className={"card border-0 col-lg-12"}>
+    return(<div className={"card bg-transparent border-0 col-lg-12"}>
         <Projects/>
     </div>)
 }
@@ -677,179 +674,11 @@ function DownLoadCV(props) {
     )
 }
 
-function SwitchTheme() {
-    /*let select = function(s) {
-            return document.querySelector(s);
-        },
-        selectAll = function(s) {
-            return document.querySelectorAll(s);
-        },
-        hit = select('.hit'),
-        allStars = selectAll('.starGroup *'),
-        allClouds = selectAll('.cloud'),
-        allCloudPuffs = selectAll('.cloud circle')
-
-
-
-    TweenMax.set('svg', {
-        visibility: 'visible'
-    })
-    TweenMax.set(allStars, {
-        transformOrigin:'50% 50%'
-    })
-    TweenLite.defaultEase = Elastic.easeOut.config(0.58,0.8);
-    var tl = new TimelineMax({paused:true});
-    tl.staggerTo(['.sun', '.moonMask', '.moon'], 1, {
-        cycle:{
-            attr:[{cx:'-=140', cy:'-=20'}, {cx:'-=140', cy:'-=20'}, {cx:'-=90',  cy:'-=0'}]
-        }
-    },0)
-
-        .staggerTo(['.moon', '.sun'], 1, {
-            cycle:{
-                alpha:[1, 0]
-            }
-        },0,'-=1')
-        .to('body', 1, {
-            //backgroundColor:'#2C3E7B'
-        },'-=1')
-        .to('.outline', 1, {
-            stroke:'#6172AD',
-            fill:'#45568D'
-        },'-=1')
-
-        .staggerFrom(allStars, 0.9, {
-            cycle:{
-                x:[-20, 30, 40, -30, 60, -40, 80, 90, 100, 110, 120]
-            },
-            alpha:0
-        },0.005,'-=1')
-
-        .staggerTo(allClouds,1, {
-            cycle:{
-                x:[40, 20]
-            },
-            alpha:0
-        },0,'-=1')
-
-        .addPause()
-
-
-        .staggerTo(['.sun', '.moonMask', '.moon'], 1, {
-            cycle:{
-                attr:[{cx:'+=140', cy:'+=20'}, {cx:'+=140', cy:'+=20'}, {cx:'+=90',  cy:'+=0'}]
-            }
-        },0)
-        .staggerTo(['.moon', '.sun'], 1, {
-            cycle:{
-                alpha:[0, 1]
-            }
-        },0,'-=1')
-        .to('body', 1, {
-            //backgroundColor:'#26D6FE',
-            ease:Linear.easeNone
-        },'-=1')
-        .to('.outline', 1, {
-            stroke:'#FCFDFE',
-            fill:'#85E8FE'
-        },'-=1')
-        .staggerTo(allStars, 1, {
-            alpha:0
-        },0,'-=1')
-        .staggerFromTo(allClouds, 0.6, {
-                cycle:{
-                    y:[120, 160],
-                    x:[0]
-                }
-            },
-            { cycle:{
-                    y:[0],
-                    x:[0]
-                },
-                alpha:1,
-                immediateRender:false
-            },0.06,'-=1')
-
-
-        .from(['.plane', '.contrail'], 0.7, {
-            x:-400,
-            ease:Linear.easeNone
-        },'-=1')
-
-        .to('.contrail',0.5, {
-            alpha:0,
-            ease:Sine.easeOut
-        })
-
-
-
-    //ScrubGSAPTimeline(tl);
-
-    function clickToggle(e){
-        if(tl.time() > 0 && tl.time() < tl.duration()){
-            tl.play()
-        } else{
-            tl.play(0)
-        }
-    }
-
-    tl.timeScale(1);
-    hit.onclick = clickToggle;
-    TweenMax.globalTimeScale(1.3);*/
-    let toggleId = "toogle-switch-theme";
-    useEffect(()=>{
-        $(window).on("load", function () {
-            SvgInjector($("#"+toggleId)[0])
-        })
-    });
-    return(
-        <a style={{
-            bottom: "5%",
-            right: "1%",
-            position: "fixed"
-        }} href={"#"} id={"switch-theme"} className={""}>
-            <img id={toggleId} src={DayAndNight} alt="" />
-        </a>
-    )
-}
-
-function ActionPreview() {
-    useEffect(()=>{
-
-    });
-
-    return(
-        <div className="container pt-4 pt-lg-0">
-            <div className="row justify-content-end">
-                <div className=" col-lg-8">
-                    <div className="d-flex">
-                        <SwitchTheme/>
-                        {/*<div className="btn-group btn-group-nav shadow ml-auto" role={"group"}>
-                            <a data-src={cvPDF} data-fancybox data-type="iframe" href="javascript:;" className="btn btn-neutral btn-icon"
-                                    data-offset="0,8">
-                                        <span className="btn-inner--icon">
-                                            <i className="fad fa-file-pdf"></i></span>
-                                <span className="btn-inner--text d-none d-sm-inline-block">PDF</span>
-                            </a>
-                            <a data-src={cvDOCX} data-fancybox data-type="iframe" href="javascript:;" className="btn btn-neutral btn-icon"
-                                    data-offset="0,8">
-                                        <span className="btn-inner--icon">
-                                            <i className="fad fa-file-word"></i></span>
-                                <span className="btn-inner--text d-none d-sm-inline-block">Word</span>
-                            </a>
-                        </div>*/}
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
-}
-
 function ProfilePage() {
     return(
         <div className={"main-content"}>
             <section className="header-account-page bg-gradient-primary d-lg-flex d-none align-items-end">
-                {/*<ActionPreview/>*/}
+
             </section>
 
             <section className="pt-5 pt-lg-0">

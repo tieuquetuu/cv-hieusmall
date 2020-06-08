@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2c46c7c3.chunk.css",
+    "main.js": "/static/js/main.4dc38520.chunk.js",
+    "main.js.map": "/static/js/main.4dc38520.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.16a6d159.js",
+    "runtime-main.js.map": "/static/js/runtime-main.16a6d159.js.map",
+    "static/css/2.4738c6e4.chunk.css": "/static/css/2.4738c6e4.chunk.css",
+    "static/js/2.060ec7ed.chunk.js": "/static/js/2.060ec7ed.chunk.js",
+    "static/js/2.060ec7ed.chunk.js.map": "/static/js/2.060ec7ed.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.24f026bc78fe2a45760fd5c809c2f361.js": "/precache-manifest.24f026bc78fe2a45760fd5c809c2f361.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.4738c6e4.chunk.css.map": "/static/css/2.4738c6e4.chunk.css.map",
+    "static/css/main.2c46c7c3.chunk.css.map": "/static/css/main.2c46c7c3.chunk.css.map",
+    "static/js/2.060ec7ed.chunk.js.LICENSE.txt": "/static/js/2.060ec7ed.chunk.js.LICENSE.txt",
+    "static/media/1.jpg": "/static/media/1.d185ec7d.jpg",
+    "static/media/2.jpg": "/static/media/2.77cdbe1a.jpg",
+    "static/media/3.jpg": "/static/media/3.4e30e3b9.jpg",
+    "static/media/4.jpg": "/static/media/4.ac6b6ef1.jpg",
+    "static/media/Nguyễn Trung Hiếu.pdf": "/static/media/Nguyễn Trung Hiếu.83f7749a.pdf",
+    "static/media/Nguyễn Trung Hiếu.docx": "/static/media/Nguyễn Trung Hiếu.d333e691.docx",
+    "static/media/ava800x800.jpg": "/static/media/ava800x800.a1607555.jpg",
+    "static/media/all.min.css": "/static/media/fa-solid-900-pro-5.9.0.fdb49673.woff2",
+    "static/media/hoang_nghia.jpg": "/static/media/hoang_nghia.9e67d9d4.jpg",
+    "static/media/le_cong_an.jpg": "/static/media/le_cong_an.15df1d6a.jpg",
+    "static/media/leloiresedence1000x900.jpg": "/static/media/leloiresedence1000x900.d29fdc7f.jpg",
+    "static/media/minigame1000x900.jpg": "/static/media/minigame1000x900.518200b8.jpg",
+    "static/media/ngocdung2x1.png": "/static/media/ngocdung2x1.06c192e8.png",
+    "static/media/tmvnd1000x900.jpg": "/static/media/tmvnd1000x900.3b03a68e.jpg",
+    "static/media/toolsndnet1000x900.jpg": "/static/media/toolsndnet1000x900.9e144b42.jpg",
+    "static/media/tran_phuoc_phuong.jpg": "/static/media/tran_phuoc_phuong.02f90892.jpg",
+    "static/media/wall800x400.jpg": "/static/media/wall800x400.6c195d78.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.16a6d159.js",
+    "static/css/2.4738c6e4.chunk.css",
+    "static/js/2.060ec7ed.chunk.js",
+    "static/css/main.2c46c7c3.chunk.css",
+    "static/js/main.4dc38520.chunk.js"
+  ]
+}
