@@ -7,9 +7,10 @@
     "age": 25,
     "city": "Hồ Chí Minh",
     "social": {
-      "github": "http://github.com/tieuquetuu",
-      "facebook": "http://fb.com/hieukitkat.thc",
-      "linkedin": "http://linkedin.com/in/nguyen-trung-hieu-b6600b181"
+      "github": "https://github.com/hieusmall",
+      "facebook": "https://fb.com/hieukitkat.thc",
+      "linkedin": "https://linkedin.com/in/nguyen-trung-hieu-b6600b181",
+      "website": "https://hieusmall.github.io"
     },
     "experience": [
       {

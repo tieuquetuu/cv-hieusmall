@@ -1,11 +1,6 @@
 import React, {useEffect} from "react";
 import user from "../components/User";
 import PageSection from "./PageSection";
-import "../css/libs/@fontawesome/fontawesome-pro/css/all.min.css";
-import "sweetalert2/dist/sweetalert2.min.css";
-import "@fancyapps/fancybox/dist/jquery.fancybox.min.css";
-// import "../scss/theme.scss";
-import "../css/theme.css";
 import Wall800x400 from "../wall800x400.png";
 import Avatar800x800 from "../ava800x800.png";
 import tmvnd1000x900 from "../img/tmvnd1000x900.png";
@@ -19,21 +14,23 @@ import toolsScreen2 from "../img/screens/tools/2.jpg";
 import toolsScreen3 from "../img/screens/tools/3.jpg";
 import toolsScreen4 from "../img/screens/tools/4.jpg";
 import leloiScreen1 from "../img/screens/leloiresidence/1.jpg";
-
 import NgocDung2x1 from "../img/ngocdung2x1.png";
 import AvatarLeCongAn from "../img/le_cong_an.png";
 import AvatarTranPhuocPhuong from "../img/tran_phuoc_phuong.png";
 import AvatarHoangNghia from "../img/hoang_nghia.png";
-
-import cvPDF from "../files/CV_Nguyễn Trung Hiếu.pdf";
-import cvDOCX from "../files/CV_Nguyễn Trung Hiếu.docx";
-
+import DayAndNight from "../img/daynight.svg";
+import cvPDF from "../files/Nguyễn Trung Hiếu.pdf";
+import cvDOCX from "../files/Nguyễn Trung Hiếu.docx";
 import CardMargin from "./CardMargin";
+import "../libs/@fontawesome/fontawesome-pro/css/all.min.css";
+import "sweetalert2/dist/sweetalert2.min.css";
+import "@fancyapps/fancybox/dist/jquery.fancybox.min.css";
 import $ from "jquery";
 import Swal from 'sweetalert2';
 import "popper.js/dist/popper.min";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-
+import SvgInjector from "../js/SvgInjector";
+import { TweenLite, TimelineMax } from 'gsap';
 const pageSection = PageSection();
 
 // Card Profile
@@ -72,12 +69,12 @@ function Contact() {
         let classes = "list-group-item border-0 bg-transparent py-2 d-flex align-items-center";
         item.text = user[item.slug];
         item.link = null;
-        let ItemLabel = <span className={"mr-3"}><i className={"mr-1 "+item.icon}></i> {item.label} </span>
-        let ItemText = <span className={"ml-auto w-50 text-left"}>{item.text}</span>;
+        let ItemLabel = <span className={"mr-3 text-xs"}><i className={"mr-1 "+item.icon}></i> {item.label} </span>
+        let ItemText = <span className={"ml-auto w-65 text-left"}>{item.text}</span>;
         if (item.slug === "email") {
-            ItemText = <a className={"ml-auto w-50 text-left text-xs"} href={"mailto:"+item.text} title={item.text}>{item.text}</a>
+            ItemText = <a className={"ml-auto w-65 text-left"} href={"mailto:"+item.text} title={item.text}>{item.text}</a>
         } else if(item.slug === "phone") {
-            ItemText = <a className={"ml-auto w-50 text-left text-xs"} href={"tel:"+item.text} title={"item.text"}>{item.text}</a>
+            ItemText = <a className={"ml-auto w-65 text-left"} href={"tel:"+item.text} title={"item.text"}>{item.text}</a>
         }
 
         return(
@@ -103,7 +100,7 @@ function Social() {
     let SocialGroupItems = group.map((item, itemKey)=> {
         let classes = "list-group-item border-0 bg-transparent py-2";
         item.link = user.social[item.slug];
-        item.text = item.link.replace("http://", "");
+        item.text = item.link.replace("https://", "");
         let ItemLabel = <div className="mr-3 icon icon-xs" style={{color: item.color}}>
             <i className={item.icon}></i>
         </div>;
@@ -512,7 +509,7 @@ function Projects() {
         });
     });
 
-    return(<div id={id} className={"col-12 pt-2 mt-2 delimiter-top"}>
+    return(<div id={id} className={"col-12 pt-2 mt-2"}>
         {ProjectTitle}
         {ProjectContent}
     </div>)
@@ -609,38 +606,38 @@ function DownLoadCV(props) {
     let wrapId = "download-shape";
     let handleClick = function(e) {
         e.preventDefault(e);
-
         Swal.fire({
-            text: "Hãy chọn file bạn muốn tải về!",
+            text: "Chọn file bạn muốn tải về!",
             showConfirmButton: true,
             showCancelButton: true,
             confirmButtonText:
-                '<i class="fad fa-file-pdf"></i> .pdf',
+                '<i class="fad fa-file-pdf"></i> PDF',
             confirmButtonColor: '#d64213',
             confirmButtonAriaLabel: 'PDF',
             confirmButtonClass: 'btn btn-sm',
             focusConfirm: false,
             cancelButtonText:
-                '<i class="fad fa-file-word"></i> .docx',
+                '<i class="fad fa-file-word"></i> Word',
             cancelButtonColor: '#1d56d6',
             cancelButtonClass: 'btn btn-sm',
             cancelButtonAriaLabel: 'DOCX',
             focusCancel: false,
-        }).then((result) => {
-            let {value, dismiss} = result;
-            let downloadPdf = typeof value === "boolean" && value === true ? true :false;
-            let downloadWord = typeof dismiss === "string" && dismiss === "cancel" ? true :false;
-            if (!downloadPdf && !downloadWord) return false;
-
-            if (downloadPdf) {
-                // window.location.href = cvPDF;
-                window.open(cvPDF, 'Download');
-            }
-            if (downloadWord) {
-                window.location.href = cvDOCX;
-                // window.open(cvDOCX, 'Download');
-            }
         })
+            .then((result) => {
+                let {value, dismiss} = result;
+                let downloadPdf = typeof value === "boolean" && value === true ? true :false;
+                let downloadWord = typeof dismiss === "string" && dismiss === "cancel" ? true :false;
+                if (!downloadPdf && !downloadWord) return false;
+
+                if (downloadPdf) {
+                    // window.location.href = cvPDF;
+                    window.open(cvPDF, 'Download');
+                }
+                if (downloadWord) {
+                    window.location.href = cvDOCX;
+                    // window.open(cvDOCX, 'Download');
+                }
+            })
     };
     let styles = {
         wrap: {
@@ -680,9 +677,145 @@ function DownLoadCV(props) {
     )
 }
 
-/*function ActionPreview() {
+function SwitchTheme() {
+    /*let select = function(s) {
+            return document.querySelector(s);
+        },
+        selectAll = function(s) {
+            return document.querySelectorAll(s);
+        },
+        hit = select('.hit'),
+        allStars = selectAll('.starGroup *'),
+        allClouds = selectAll('.cloud'),
+        allCloudPuffs = selectAll('.cloud circle')
+
+
+
+    TweenMax.set('svg', {
+        visibility: 'visible'
+    })
+    TweenMax.set(allStars, {
+        transformOrigin:'50% 50%'
+    })
+    TweenLite.defaultEase = Elastic.easeOut.config(0.58,0.8);
+    var tl = new TimelineMax({paused:true});
+    tl.staggerTo(['.sun', '.moonMask', '.moon'], 1, {
+        cycle:{
+            attr:[{cx:'-=140', cy:'-=20'}, {cx:'-=140', cy:'-=20'}, {cx:'-=90',  cy:'-=0'}]
+        }
+    },0)
+
+        .staggerTo(['.moon', '.sun'], 1, {
+            cycle:{
+                alpha:[1, 0]
+            }
+        },0,'-=1')
+        .to('body', 1, {
+            //backgroundColor:'#2C3E7B'
+        },'-=1')
+        .to('.outline', 1, {
+            stroke:'#6172AD',
+            fill:'#45568D'
+        },'-=1')
+
+        .staggerFrom(allStars, 0.9, {
+            cycle:{
+                x:[-20, 30, 40, -30, 60, -40, 80, 90, 100, 110, 120]
+            },
+            alpha:0
+        },0.005,'-=1')
+
+        .staggerTo(allClouds,1, {
+            cycle:{
+                x:[40, 20]
+            },
+            alpha:0
+        },0,'-=1')
+
+        .addPause()
+
+
+        .staggerTo(['.sun', '.moonMask', '.moon'], 1, {
+            cycle:{
+                attr:[{cx:'+=140', cy:'+=20'}, {cx:'+=140', cy:'+=20'}, {cx:'+=90',  cy:'+=0'}]
+            }
+        },0)
+        .staggerTo(['.moon', '.sun'], 1, {
+            cycle:{
+                alpha:[0, 1]
+            }
+        },0,'-=1')
+        .to('body', 1, {
+            //backgroundColor:'#26D6FE',
+            ease:Linear.easeNone
+        },'-=1')
+        .to('.outline', 1, {
+            stroke:'#FCFDFE',
+            fill:'#85E8FE'
+        },'-=1')
+        .staggerTo(allStars, 1, {
+            alpha:0
+        },0,'-=1')
+        .staggerFromTo(allClouds, 0.6, {
+                cycle:{
+                    y:[120, 160],
+                    x:[0]
+                }
+            },
+            { cycle:{
+                    y:[0],
+                    x:[0]
+                },
+                alpha:1,
+                immediateRender:false
+            },0.06,'-=1')
+
+
+        .from(['.plane', '.contrail'], 0.7, {
+            x:-400,
+            ease:Linear.easeNone
+        },'-=1')
+
+        .to('.contrail',0.5, {
+            alpha:0,
+            ease:Sine.easeOut
+        })
+
+
+
+    //ScrubGSAPTimeline(tl);
+
+    function clickToggle(e){
+        if(tl.time() > 0 && tl.time() < tl.duration()){
+            tl.play()
+        } else{
+            tl.play(0)
+        }
+    }
+
+    tl.timeScale(1);
+    hit.onclick = clickToggle;
+    TweenMax.globalTimeScale(1.3);*/
+    let toggleId = "toogle-switch-theme";
     useEffect(()=>{
-        console.log(cvPDF);
+        $(window).on("load", function () {
+            SvgInjector($("#"+toggleId)[0])
+        })
+    });
+    return(
+        <a style={{
+            bottom: "5%",
+            right: "1%",
+            position: "fixed"
+        }} href={"#"} id={"switch-theme"} className={""}>
+            <img id={toggleId} src={DayAndNight} alt="" />
+        </a>
+    )
+}
+
+function ActionPreview() {
+    useEffect(()=>{
+
     });
 
     return(
@@ -690,7 +823,8 @@ function DownLoadCV(props) {
             <div className="row justify-content-end">
                 <div className=" col-lg-8">
                     <div className="d-flex">
-                        <div className="btn-group btn-group-nav shadow ml-auto" role={"group"}>
+                        <SwitchTheme/>
+                        {/*<div className="btn-group btn-group-nav shadow ml-auto" role={"group"}>
                             <a data-src={cvPDF} data-fancybox data-type="iframe" href="javascript:;" className="btn btn-neutral btn-icon"
                                     data-offset="0,8">
                                         <span className="btn-inner--icon">
@@ -703,18 +837,18 @@ function DownLoadCV(props) {
                                             <i className="fad fa-file-word"></i></span>
                                 <span className="btn-inner--text d-none d-sm-inline-block">Word</span>
                             </a>
-                        </div>
+                        </div>*/}
                     </div>
                 </div>
             </div>
         </div>
     )
-}*/
+}
 
 function ProfilePage() {
     return(
         <div className={"main-content"}>
-            <section className="header-account-page bg-gradient-primary d-flex align-items-end">
+            <section className="header-account-page bg-gradient-primary d-lg-flex d-none align-items-end">
                 {/*<ActionPreview/>*/}
             </section>
 

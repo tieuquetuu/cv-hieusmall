@@ -47,6 +47,12 @@
           "slug": "linkedin",
           "icon": "fab fa-linkedin",
           "color": "#0073b1"
+        },
+        {
+          "label": "Website",
+          "slug": "website",
+          "icon": "fad fa-globe",
+          "color": "#1d49af"
         }
       ]
     },
