@@ -25,11 +25,21 @@ import "../libs/@fontawesome/fontawesome-pro/css/all.min.css";
 import "sweetalert2/dist/sweetalert2.min.css";
 import "@fancyapps/fancybox/dist/jquery.fancybox.min.css";
 // import "../css/theme.css";
+// import io from 'socket.io-client';
 import $ from "jquery";
 import Swal from 'sweetalert2';
 import "popper.js/dist/popper.min";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+
 const pageSection = PageSection();
+
+// const socket = io("http://localhost:4000");
+// socket.on('connect', function(){
+//     console.log("connect socket")
+// });
+// socket.on('event', function(data){});
+// socket.on('disconnect', function(){});
+
 
 // Card Profile
 
@@ -43,7 +53,7 @@ function UserAvatarCover() {
 
 function UserAvatar() {
     return(
-        <a href="/#" className="mx-auto">
+        <a href="/" className="mx-auto">
             <img alt={user.name} src={Avatar800x800}
                  className="card-profile-image avatar rounded-circle shadow hover-shadow-lg" />
         </a>
