@@ -24,6 +24,7 @@ import CardMargin from "./CardMargin";
 import "../libs/@fontawesome/fontawesome-pro/css/all.min.css";
 import "sweetalert2/dist/sweetalert2.min.css";
 import "@fancyapps/fancybox/dist/jquery.fancybox.min.css";
+// import "../css/theme.css";
 import $ from "jquery";
 import Swal from 'sweetalert2';
 import "popper.js/dist/popper.min";
@@ -665,9 +666,11 @@ function DownLoadCV(props) {
             <button type="button" onClick={handleClick} style={styles.button}
                 className="icon-floating floating bg-gradient-primary border-0
                  btn btn-animated btn-danger rounded-circle btn-icon-only btn-animated-x">
-                <span className="btn-inner--visible"><i className={"far fa-file-download"}></i></span>
-                <span className="btn-inner--hidden">
+                <span className="btn-inner--visible">
                     <i className="far fa-download"></i>
+                </span>
+                <span className="btn-inner--hidden">
+                    <i className={"far fa-file-download"}></i>
                 </span>
             </button>
         </div>

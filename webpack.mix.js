@@ -1,5 +1,12 @@
 let mix = require('laravel-mix');
 
+
+/*mix.setPublicPath('src')
+	.sass('src/scss/theme.scss', 'css')
+	.sass('src/scss/theme-blue-light.scss', 'css')
+	.sass('src/scss/theme-blue-dark.scss', 'css')
+	.sass('src/scss/theme-dark.scss', 'css')*/
+
 mix.setPublicPath('public')
 	.sass('src/scss/theme.scss', 'css')
 	.sass('src/scss/theme-blue-light.scss', 'css')
